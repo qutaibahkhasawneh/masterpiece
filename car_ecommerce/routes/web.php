@@ -17,6 +17,17 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/admin/index', function () {
+    return view('admin.index');
+});
+
+Route::get('/admin/users', function () {
+    return view('admin.users');
+});
+Route::get('/admin/add-products', function () {
+    return view('admin.users');
+});
+
 Route::get('/', function () {
     return view('pages.index');
 });
