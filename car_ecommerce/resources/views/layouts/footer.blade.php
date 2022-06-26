@@ -91,6 +91,23 @@
 <!-- main js -->
 <script src="{{asset('assets/js/main.js')}}"></script>
 
+<!--===============================================================================================-->
+<script src="{{asset('form/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/vendor/animsition/js/animsition.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{asset('form/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/vendor/daterangepicker/moment.min.js')}}"></script>
+	<script src="{{asset('form/vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{asset('form/js/main.js')}}"></script>
+
 </body>
 </html>
 

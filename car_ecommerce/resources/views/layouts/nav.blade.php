@@ -31,6 +31,29 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="{{asset('assets/css/responsive.css') }}">
 
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{asset('form/images/icons/favicon.ico')}}"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/bootstrap/css/bootstrap.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/animate/animate.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/css-hamburgers/hamburgers.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/animsition/css/animsition.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/select2/select2.min.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/vendor/daterangepicker/daterangepicker.css')}}">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{{asset('form/css/util.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('form/css/main.css')}}">
+    <!--===============================================================================================-->
+
 </head>
 <body>
 
@@ -59,13 +82,13 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="#">Home</a>
+								<li class="current-list-item"><a href="/">Home</a>
 									{{-- <ul class="sub-menu">
 										<li><a href="index.html">Static Home</a></li>
 										<li><a href="index_2.html">Slider Home</a></li>
 									</ul> --}}
 								</li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="/about">About</a></li>
 								{{-- <li><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
@@ -83,8 +106,9 @@
 										<li><a href="single-news.html">Single News</a></li>
 									</ul>
 								</li> --}}
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="shop.html">Shop</a>
+								<li><a href="/contact">Contact</a></li>
+								<li><a href="/profile">Profile</a></li>
+								<li><a href="/shop">Shop</a>
 									<ul class="sub-menu">
 										<li><a href="shop.html">Shop</a></li>
 										<li><a href="checkout.html">Check Out</a></li>
@@ -92,6 +116,10 @@
 										<li><a href="cart.html">Cart</a></li>
 									</ul>
 								</li>
+                                <li>
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/register">Register</a></li>
+                                </li>
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>

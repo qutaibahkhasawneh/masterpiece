@@ -104,30 +104,33 @@
                     <div class="product-image">
                         <a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
                     </div>
-                    <h3>Exterior</h3>
+
                     {{-- <p class="product-price"><span>Per Kg</span> 85$ </p> --}}
                     <a href="cart.html" ></a>
                 </div>
+                <h3 class="my-5">Exterior</h3>
             </div>
             <div class="col-lg-4 col-md-6 text-center">
                 <div class="single-product-item">
                     <div class="product-image">
                         <a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
                     </div>
-                    <h3>Interior</h3>
+
                     {{-- <p class="product-price"><span>Per Kg</span> 70$ </p> --}}
                     <a href="cart.html" ></a>
                 </div>
+                <h3 class="my-5">Interior</h3>
             </div>
             <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
                 <div class="single-product-item">
                     <div class="product-image">
                         <a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
                     </div>
-                    <h3>Packegies</h3>
+
                     {{-- <p class="product-price"><span>Per Kg</span> 35$ </p> --}}
                     <a href="cart.html"></a>
                 </div>
+                <h3 class="my-5">Packegies</h3>
             </div>
         </div>
     </div>
@@ -244,11 +247,12 @@
 <!-- end advertisement section -->
 
 <!-- shop banner -->
-<section class="shop-banner">
+<section class="shop-banner container">
     <div class="container">
-        <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
-        <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
-        <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
+        {{-- <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div> --}}
+        {{-- <a href="shop.html" class="cart-btn btn-lg">Shop Now</a> --}}
+
     </div>
 </section>
 <br>
