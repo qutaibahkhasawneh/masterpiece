@@ -22,22 +22,24 @@
                 <div class="footer-box pages">
                     <h2 class="widget-title">Pages</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Shop</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/shop">Shop</a></li>
+
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="footer-box subscribe">
-                    <h2 class="widget-title">Subscribe</h2>
-                    <p>Subscribe to our mailing list to get the latest updates.</p>
-                    <form action="index.html">
+                    <img style="height:150px ; width:150px" src="{{ asset('assets/img/logo.png')}}" alt="">
+                    {{-- <h2 class="widget-title">Subscribe</h2> --}}
+
+
+                    {{-- <form action="index.html">
                         <input type="email" placeholder="Email">
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>
@@ -50,8 +52,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.<br>
-                    Distributed By - <a href="https://themewagon.com/">Themewagon</a>
+                <p>Copyrights &copy; 2022 -  All Rights Reserved.<br>
+
                 </p>
             </div>
             <div class="col-lg-6 text-right col-md-12">

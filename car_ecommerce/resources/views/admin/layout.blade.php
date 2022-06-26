@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>interviewHUB - Dashboard</title>
+    <title>Car-Care Dashboard</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -49,8 +49,8 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="admin/users" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
-                    <a href="admin/add-products" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Products</a>
+                    <a href="{{route('admin/users')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
+                    <a href="{{route('admin/add-products')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Products</a>
                     <div class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Categories</a>
                         <div class="dropdown-menu bg-transparent border-0">

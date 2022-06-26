@@ -42,49 +42,7 @@
 </div>
 <!-- end hero area -->
 
-<!-- features list section -->
-{{-- <div class="list-section pt-80 pb-80">
-    <div class="container">
 
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <div class="list-box d-flex align-items-center">
-                    <div class="list-icon">
-                        <i class="fas fa-shipping-fast"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Free Shipping</h3>
-                        <p>When order over $75</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <div class="list-box d-flex align-items-center">
-                    <div class="list-icon">
-                        <i class="fas fa-phone-volume"></i>
-                    </div>
-                    <div class="content">
-                        <h3>24/7 Support</h3>
-                        <p>Get support all day</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="list-box d-flex justify-content-start align-items-center">
-                    <div class="list-icon">
-                        <i class="fas fa-sync"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Refund</h3>
-                        <p>Get refund within 3 days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> --}}
-<!-- end features list section -->
 
 <!-- product section -->
 <div class="product-section mt-150 mb-150">
@@ -92,7 +50,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
-                    <h3><span class="orange-text"></span> Products</h3>
+                    <h3><span class="orange-text">Our</span> Categories</h3>
 
                 </div>
             </div>
@@ -140,9 +98,9 @@
 <!-- cart banner section -->
 {{-- <section class="cart-banner pt-100 pb-100">
     <div class="container">
-        <div class="row clearfix">
+        <div class="row clearfix"> --}}
             <!--Image Column-->
-            <div class="image-column col-lg-6">
+            {{-- <div class="image-column col-lg-6">
                 <div class="image">
                     <div class="price-box">
                         <div class="inner-price">
@@ -165,7 +123,7 @@
             </div>
         </div>
     </div> --}}
-{{-- </section> --}}
+{{-- </section>
 <!-- end cart banner section -->
 
 <!-- testimonail-section -->
@@ -234,11 +192,12 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="abt-text">
-                    <p class="top-sub">Since Year 1999</p>
-                    <h2>We are <span class="orange-text">Fruitkha</span></h2>
-                    <p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-                    <a href="about.html" class="boxed-btn mt-4">know more</a>
+                    <p class="top-sub">Since Year 2005</p>
+                    <h2>We are <span class="orange-text">Carcare</span></h2>
+                    <p>Because of climate change and external factors that affect our vehicles from cold and heat waves throughout the year.</p>
+                    <p>There is an urgent need to take care of our vehicles, so we established an carcare .Which offers many materials that protect our vehicles
+                        .</p>
+                    <a href="/about" class="boxed-btn mt-4">know more</a>
                 </div>
             </div>
         </div>
@@ -246,12 +205,59 @@
 </div>
 <!-- end advertisement section -->
 
-<!-- shop banner -->
-<section class="shop-banner container">
+
+
+
+<!-- features list section -->
+<div class="list-section pt-80 pb-80">
     <div class="container">
-        {{-- <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
-        <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div> --}}
-        {{-- <a href="shop.html" class="cart-btn btn-lg">Shop Now</a> --}}
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="list-box d-flex align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Free Shipping</h3>
+                        <p>When order over 100 JOD</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <div class="list-box d-flex align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="content">
+                        <h3>24/7 Support</h3>
+                        <p>Get support all day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="list-box d-flex justify-content-start align-items-center">
+                    <div class="list-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <div class="content">
+                        <h3>Refund</h3>
+                        <p>Get refund within 3 days!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div><br><br><br><br><br><br><br><br>
+<!-- end features list section -->
+
+<!-- shop banner -->
+<section class="shop-banner ">
+    <div class="container">
+        <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
+      <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
 
     </div>
 </section>
@@ -356,5 +362,7 @@
     </div>
 </div> --}}
 <!-- end logo carousel -->
+
+
 
 @endsection

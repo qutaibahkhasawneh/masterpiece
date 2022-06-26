@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Fruitkha</title>
+	<title>Car-Care</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="{{asset('./assets/img/favicon.png')}}">
@@ -54,6 +54,14 @@
         <link rel="stylesheet" type="text/css" href="{{asset('form/css/main.css')}}">
     <!--===============================================================================================-->
 
+    <style>
+
+        .logoo{
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -74,7 +82,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="index.html">
-								<img src="{{ asset('assets/img/logo.png')}}" alt="">
+								<img class="logoo" src="{{ asset('assets/img/logo.png')}}" alt="">
 							</a>
 						</div>
 						<!-- logo -->

@@ -9,7 +9,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>We sale fresh fruits</p>
+						<p></p>
 						<h1>About Us</h1>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-lg-7">
 					<div class="featured-text">
-						<h2 class="pb-3">Why <span class="orange-text">Fruitkha</span></h2>
+						<h2 class="pb-3">Why <span class="orange-text">CarCare</span></h2>
 						<div class="row">
 							<div class="col-lg-6 col-md-6 mb-4 mb-md-5">
 								<div class="list-box d-flex">
@@ -79,13 +79,13 @@
 	<!-- end featured section -->
 
 	<!-- shop banner -->
-	<section class="shop-banner">
+	{{-- <section class="shop-banner">
     	<div class="container">
         	<h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
             <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
             <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
         </div>
-    </section>
+    </section> --}}
 	<!-- end shop banner -->
 
 	<!-- team section -->
@@ -95,7 +95,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">
 						<h3>Our <span class="orange-text">Team</span></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+						<p><span class="orange-text">Carcare</span> offers a service to take care of your car while you are in your homes through our team, which you can book an appointment and we will send our team as soon as possible.</p>
 					</div>
 				</div>
 			</div>
@@ -103,43 +103,43 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-1"></div>
-						<h4>Jimmy Doe <span>Farmer</span></h4>
-						<ul class="social-link-team">
+						<h4>Jimmy Doe <span>postion</span></h4>
+						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+						</ul> --}}
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-2"></div>
-						<h4>Marry Doe <span>Farmer</span></h4>
-						<ul class="social-link-team">
+						<h4>Marry Doe <span>postion</span></h4>
+						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+						</ul> --}}
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-3"></div>
-						<h4>Simon Joe <span>Farmer</span></h4>
-						<ul class="social-link-team">
+						<h4>Simon Joe <span>postion</span></h4>
+						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+						</ul> --}}
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><br><br><br><br><br><br><br><br><br>
 	<!-- end team section -->
 
 	<!-- testimonail-section -->
-	<div class="testimonail-section mt-80 mb-150">
+	{{-- <div class="testimonail-section mt-80 mb-150">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 text-center">
@@ -190,7 +190,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!-- end testimonail-section -->
 
 	<!-- logo carousel -->
@@ -218,7 +218,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><br><br><br><br><br><br><br><br><br>
 	<!-- end logo carousel -->
 
 @endsection

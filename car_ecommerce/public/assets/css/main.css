@@ -2172,6 +2172,7 @@ a.video-play-btn {
   -webkit-box-shadow: 0 0 20px #cacaca;
   box-shadow: 0 0 20px #cacaca;
   border-bottom-left-radius: 5px;
+  margin-right: 50px;
 }
 
 .team-bg-1 {
