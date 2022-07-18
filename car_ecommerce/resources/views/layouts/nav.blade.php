@@ -126,7 +126,7 @@
 								</li>
                                 <li>
                                     <li><a href="/login">Login</a></li>
-                                    <li><a href="/register">Register</a></li>
+                                    <li><a href="logout">Register</a></li>
                                 </li>
 								<li>
 									<div class="header-icons">

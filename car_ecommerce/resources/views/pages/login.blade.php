@@ -23,25 +23,40 @@
 					</span>
 				</div>
 
-				<form class="login100-form validate-form">
-					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+				<form class="login100-form validate-form" action="{{route('login-user')}}" method="POST">
+                    @method('POST')
+                    @csrf
+                    @if (Session::has('success'))
+                    <div class="alert alert-success">{{Session::get('success')}}</div>
+                    @endif
+                    @if (Session::has('fail'))
+                    <div class="alert alert-danger">{{Session::get('fail')}}</div>
+                    @endif
+					{{-- <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">Username</span>
 						<input class="input100" type="text" name="username" placeholder="Enter username">
 						<span class="focus-input100"></span>
-					</div>
+					</div> --}}
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
+                        <span class="label-input100">Email</span>
+                        <input class="input100" type="email" name="email" value="{{old('email')}}" placeholder="email">
+                        <span class="focus-input100"></span>
+                    </div>
+                    <span class="text-danger">@error('email') {{$message}} @enderror</span>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Enter password">
+						<input class="input100" type="password" name="password" value="{{old('password')}}" placeholder="Enter password">
 						<span class="focus-input100"></span>
 					</div>
+                    <span class="text-danger">@error('password') {{$message}} @enderror</span>
 
 					<div class="flex-sb-m w-full p-b-30">
 						<div class="contact100-form-checkbox">
 
 							<label >
 								<label >
-                                    Dont Have an account ? <a style="color: orange" href="/register">Register</a>
+                                    Dont Have an account ? <a style="color: orange" href="register">Register</a>
                                 </label>
 							</label>
 						</div>

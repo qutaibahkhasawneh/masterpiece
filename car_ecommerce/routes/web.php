@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use TCG\Voyager\Facades\Voyager;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,17 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+//------------------user route-------------
+
+Route::get('/login',[UserController::class,'logindex'])->middleware('alreadyLoggedIn');
+Route::get('/registeration',[UserController::class,'create'])->middleware('alreadyLoggedIn');
+Route::post('/register-user',[UserController::class,'store'])->name('register-user');
+Route::post('/login-user',[UserController::class,'loginUser'])->name('login-user');
+Route::get('/logout',[UserController::class,'logout']);
+
+
+//------------------user route-------------
 
 Route::get('/admin/index', function () {
     return view('admin.index');
@@ -65,10 +79,10 @@ Route::get('/profile', function () {
     return view('pages.profile');
 });
 
-Route::get('/login', function () {
-    return view('pages.login');
-});
+// Route::get('/login', function () {
+//     return view('pages.login');
+// });
 
-Route::get('/register', function () {
-    return view('pages.register');
-});
+// Route::get('/register', function () {
+//     return view('pages.register');
+// });
