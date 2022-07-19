@@ -83,7 +83,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data= User::where('id', '=', $id)->first();
+        return view('pages.editprofile', compact('data'));
     }
 
     /**
@@ -135,5 +136,32 @@ class UserController extends Controller
             Session::pull('loginId');
             return view('pages.index');
         };
+    }
+
+    public function viewProfile(){
+        $data = array();
+        if (Session::has('loginId')){
+            $data = User::where('id', '=', Session::get('loginId'))->first();
+        }
+        return view('pages.profile', compact('data'));
+    }
+
+    public function updateProfile(Request $request){
+        // $request->validate([
+        //     'email' => ['required', 'email', Rule::unique('users', 'email')],
+        //     'phone' => ['required', 'regex:/^([0]{1}[7-9]{1})([0-9]{8})$/', 'digits:10', Rule::unique('users', 'phone')],
+        //     'address' => ['required'],
+        // ]);
+        $id= $request->id;
+        $email = $request->email;
+        $phone = $request->phone;
+        $address = $request->address;
+
+        User::where('id', '=',$id)->update([
+            'phone'=>$phone,
+            'email'=>$email,
+            'address'=>$address,
+        ]);
+        return redirect()->back()->with('success','Updated Successfully');
     }
 }

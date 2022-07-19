@@ -9,13 +9,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                            <img src="https://cdn.icon-icons.com/icons2/3065/PNG/512/profile_user_account_icon_190938.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110"><br>
                             <div class="mt-3">
-                                <h4>John Doe</h4>
-                                <p class="text-secondary mb-1">Full Stack Developer</p>
-                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                                <button class="btn btn-primary">Follow</button>
-                                <button class="btn btn-outline-primary">Message</button>
+                                <h3>{{$data->name}}</h3>
+                                <p class="text-secondary mb-1"></p>
+                                <p class="text-muted font-size-sm"></p>
+                                <br><br>
+                                {{-- <button class="btn btn-primary">Follow</button> --}}
+                                {{-- <button class="btn btn-outline-primary">Message</button> --}}
                             </div>
                         </div>
                         <hr class="my-4">
@@ -52,7 +53,7 @@
                                 <h6 class="mb-0">Full Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="John Doe">
+                                <input type="text" class="form-control" value="{{$data->name}}">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -60,23 +61,23 @@
                                 <h6 class="mb-0">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="john@example.com">
+                                <input type="text" class="form-control" value="{{$data->email}}">
                             </div>
                         </div>
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Phone</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                                 <input type="text" class="form-control" value="(239) 816-9029">
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="row mb-3">
                             <div class="col-sm-3">
                                 <h6 class="mb-0">Mobile</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="(320) 380-4539">
+                                <input type="text" class="form-control" value="{{$data->phone}}">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -84,13 +85,13 @@
                                 <h6 class="mb-0">Address</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                <input type="text" class="form-control" value="{{$data->address}}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="button" class="btn btn-primary px-4" value="Save Changes">
+                                <a  href="{{url('editprofile/'.$data->id)}}" class="btn btn-warning">Edit profile</a>
                             </div>
                         </div>
                     </div>
@@ -127,7 +128,7 @@
             </div>
         </div>
     </div>
-</div>
+</div><br><br><br><br><br><br>
 
 <style>
 

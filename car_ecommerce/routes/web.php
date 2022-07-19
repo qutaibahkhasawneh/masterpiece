@@ -27,6 +27,9 @@ Route::get('/registeration',[UserController::class,'create'])->middleware('alrea
 Route::post('/register-user',[UserController::class,'store'])->name('register-user');
 Route::post('/login-user',[UserController::class,'loginUser'])->name('login-user');
 Route::get('/logout',[UserController::class,'logout']);
+Route::get('/profile',[UserController::class,'viewProfile']);
+Route::get('/editprofile/{id}',[UserController::class,'edit']);
+Route::post('/updateprofile',[UserController::class,'updateProfile']);
 
 
 //------------------user route-------------
@@ -74,10 +77,13 @@ Route::get('/shop', function () {
 Route::get('/checkout', function () {
     return view('pages.checkout');
 });
-
-Route::get('/profile', function () {
-    return view('pages.profile');
+Route::get('/edit', function () {
+    return view('pages.editprofile');
 });
+
+// Route::get('/profile', function () {
+//     return view('pages.profile');
+// });
 
 // Route::get('/login', function () {
 //     return view('pages.login');
