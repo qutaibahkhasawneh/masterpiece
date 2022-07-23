@@ -164,4 +164,13 @@ class UserController extends Controller
         ]);
         return redirect()->back()->with('success','Updated Successfully');
     }
+
+    public function addUser(){
+        $customers = User::get();
+        return view('admin.users', compact('customers'));
+    }
+    public function deleteUser($id){
+        User::where('id', '=',$id)->delete();
+        return redirect()->back()->with('success','Delete User Successfully');
+    }
 }

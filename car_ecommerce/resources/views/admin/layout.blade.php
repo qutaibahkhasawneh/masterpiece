@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -49,14 +50,14 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="{{route('admin/users')}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
-                    <a href="{{route('admin/add-products')}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Products</a>
+                    <a href="{{'admin_users'}}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
+                    <a href="{{'add_product'}}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Products</a>
                     <div class="nav-item dropdown">
-                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Categories</a>
-                        <div class="dropdown-menu bg-transparent border-0">
+                        <a href="{{'admin_c'}}" class="nav-link nav-link"><i class="fa fa-laptop me-2"></i>Categories</a>
+                        {{-- <div class="dropdown-menu bg-transparent border-0">
                             <a href="" class="dropdown-item">Add</a>
                             <a href="" class="dropdown-item">Add </a>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="nav-item dropdown">
@@ -165,26 +166,26 @@
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
+            {{-- <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
                             &copy; <a href="#">Your Site Name</a>, All Right Reserved.
                         </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                        <div class="col-12 col-sm-6 text-center text-sm-end"> --}}
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            {{-- Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Footer End -->
-        </div>
+        {{-- </div> --}}
         <!-- Content End -->
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        {{-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> --}}
     </div>
 
     <!-- JavaScript Libraries -->
@@ -200,6 +201,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>
