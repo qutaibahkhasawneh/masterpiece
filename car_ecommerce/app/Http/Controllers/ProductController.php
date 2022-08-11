@@ -66,7 +66,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $product = Product::get();
+        return view('pages.shop',compact('product'));
     }
 
     /**
@@ -118,6 +119,14 @@ class ProductController extends Controller
 
     }
 
+    public function singleCategory($id){
+
+        $category=Category::find($id);
+        $product=Product::where('category_id' ,$id)->get();
+        return view('pages.single_category' ,compact('category','product'));
+
+    }
+
     public function updateProducts(Request $request){
 
         $request->validate([
@@ -147,5 +156,16 @@ class ProductController extends Controller
 
         ]);
         return redirect()->back()->with('success','Product updated successuflly');
+    }
+
+    public function allProduct(){
+        $product = Product::all();
+        return view('pages.shop',compact('product'));
+    }
+
+    public function singleProduct($id){
+        $product = Product::where ('products.id', '=', $id)->first();
+        // dd($product);
+        return view('pages.single-product', compact('product'));
     }
 }

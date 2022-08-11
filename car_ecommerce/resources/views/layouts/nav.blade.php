@@ -14,6 +14,7 @@
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="{{asset('assets/css/all.min.css') }}">
 	<!-- bootstrap -->
@@ -118,7 +119,7 @@
 								<li><a href="/profile">Profile</a></li>
 								<li><a href="/shop">Shop</a>
 									<ul class="sub-menu">
-										<li><a href="shop.html">Shop</a></li>
+										<li><a href="/show_products">Shop</a></li>
 										<li><a href="checkout.html">Check Out</a></li>
 										<li><a href="single-product.html">Single Product</a></li>
 										<li><a href="cart.html">Cart</a></li>
@@ -130,7 +131,7 @@
                                 </li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="/show_carts"><i class="fas fa-shopping-cart"></i></a>
 										<a href="cart.html"><i class="fa-solid fa-user"></i></a>
 										{{-- <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a> --}}
 									</div>

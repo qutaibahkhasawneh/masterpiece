@@ -26,39 +26,56 @@
                     <table class="cart-table">
                         <thead class="cart-table-head">
                             <tr class="table-head-row">
-                                <th class="product-remove"></th>
                                 <th class="product-image">Product Image</th>
                                 <th class="product-name">Name</th>
                                 <th class="product-price">Price</th>
-                                <th class="product-quantity">Quantity</th>
                                 <th class="product-total">Total</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-quantity">Update</th>
+                                <th class="product-remove">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cartItems as $item)
+
+
                             <tr class="table-body-row">
-                                <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-                                <td class="product-image"><img src="assets/img/products/product-img-1.jpg" alt=""></td>
-                                <td class="product-name">Strawberry</td>
-                                <td class="product-price">$85</td>
-                                <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                <td class="product-total">1</td>
+
+                                <td class="product-image"><img style="height: 70px " src="{{asset('PostsImage/'.$item->product_img)}}" alt=""></td>
+                                <td class="product-name">{{$item->product_name }}</td>
+                                <td class="product-price">${{$item->product_price}}</td>
+                                <form  action="{{ route('carts.update', $item->id) }}" method="POST">
+                                    <td class="product-total">{{$item->quantity}}</td>
+                                    <td class="product-quantity"><input type="number" name="quantity" value="{{ $item->quantity }}"
+                                        class="quantity form-control input-number" value="1" min="1" max="100"></td>
+                                    @method('PUT')
+                                    @csrf
+                                    <td class="product-update"><button type="submit"><i style="color: orange" class="fa-solid fa-pencil"></i></td>
+                                </form>
+                                <td>
+                                    <form  method="POST" action="{{ route('carts.destroy', $item->id) }}">
+                                        @method("DELETE")
+                                        @csrf
+                                        <button  type="submit"><i style="color: red" class="fa-solid fa-trash-can"></i></button></td>
+                                    </form>
                             </tr>
-                            <tr class="table-body-row">
+                            @endforeach
+                            {{-- <tr class="table-body-row">
                                 <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
                                 <td class="product-image"><img src="assets/img/products/product-img-2.jpg" alt=""></td>
                                 <td class="product-name">Berry</td>
                                 <td class="product-price">$70</td>
                                 <td class="product-quantity"><input type="number" placeholder="0"></td>
                                 <td class="product-total">1</td>
-                            </tr>
-                            <tr class="table-body-row">
+                            </tr> --}}
+                            {{-- <tr class="table-body-row">
                                 <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
                                 <td class="product-image"><img src="assets/img/products/product-img-3.jpg" alt=""></td>
                                 <td class="product-name">Lemon</td>
                                 <td class="product-price">$35</td>
                                 <td class="product-quantity"><input type="number" placeholder="0"></td>
                                 <td class="product-total">1</td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>
@@ -88,13 +105,23 @@
                             </tr>
                         </tbody>
                     </table>
+                    {{-- <form  action="{{ route('carts.update', $item->id) }}" method="POST">
+                        @method('PUT')
+                        @csrf
                     <div class="cart-buttons">
-                        <a href="cart.html" class="boxed-btn">Update Cart</a>
-                        <a href="checkout.html" class="boxed-btn black">Check Out</a>
+                        <input type="submit" name="update" value="Update cart" >
+                        <input type="number" name="quantity" value="{{ $item->quantity }}"
+                        class="quantity form-control input-number" value="1" min="1" max="100">
+                    </form> --}}
+                        <br>
+                        
+                        <a class="btn btn-warning" href="{{route('carts.checkout')}}">Check out</a>
+
+
                     </div>
                 </div>
 
-                <div class="coupon-section">
+                {{-- <div class="coupon-section">
                     <h3>Apply Coupon</h3>
                     <div class="coupon-form-wrap">
                         <form action="index.html">
@@ -102,7 +129,7 @@
                             <p><input type="submit" value="Apply"></p>
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

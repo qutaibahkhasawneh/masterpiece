@@ -94,36 +94,36 @@
 								</tr>
 							</thead>
 							<tbody class="order-details-body">
-								<tr>
+								{{-- <tr>
 									<td>Product</td>
 									<td>Total</td>
-								</tr>
+								</tr> --}}
+                                @foreach ($allCart as $item)
 								<tr>
-									<td>Strawberry</td>
-									<td>$85.00</td>
+
+
+
+									<td>{{$item->product_name}}</td>
+									<td>{{$item->sub_total}}JD</td>
+
 								</tr>
-								<tr>
-									<td>Berry</td>
-									<td>$70.00</td>
-								</tr>
-								<tr>
-									<td>Lemon</td>
-									<td>$35.00</td>
-								</tr>
+                                @endforeach
+
 							</tbody>
 							<tbody class="checkout-details">
-								<tr>
+								{{-- <tr>
 									<td>Subtotal</td>
 									<td>$190</td>
 								</tr>
 								<tr>
 									<td>Shipping</td>
 									<td>$50</td>
-								</tr>
-								<tr>
+								</tr> --}}
+                                <tr>
 									<td>Total</td>
-									<td>$240</td>
+									<td>{{$total_price}}JD</td>
 								</tr>
+
 							</tbody>
 						</table>
 						<a href="#" class="boxed-btn">Place Order</a>

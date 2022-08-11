@@ -56,41 +56,51 @@
             </div>
         </div>
 
-        <div class="row">
+
+        <div class="row" id="category">
+
+            @foreach ($category as $item)
             <div class="col-lg-4 col-md-6 text-center">
+
                 <div class="single-product-item">
+
                     <div class="product-image">
-                        <a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+
+                        <a href="{{route('single_category',['id'=>$item->id])}}"><img style="height: 350px" src="{{asset('PostsImage/'.$item->category_img)}}" alt=""></a>
                     </div>
 
                     {{-- <p class="product-price"><span>Per Kg</span> 85$ </p> --}}
-                    <a href="cart.html" ></a>
+                    <a href="" ></a>
                 </div>
-                <h3 class="my-5">Exterior</h3>
+                <h2 class="my-5">{{$item->category_name }}</h2>
             </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="single-product-item">
-                    <div class="product-image">
-                        <a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
-                    </div>
+            @endforeach
+
+            {{-- <div class="col-lg-4 col-md-6 text-center"> --}}
+                {{-- <div class="single-product-item"> --}}
+                    {{-- <div class="product-image"> --}}
+                        {{-- <a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a> --}}
+                    {{-- </div> --}}
 
                     {{-- <p class="product-price"><span>Per Kg</span> 70$ </p> --}}
-                    <a href="cart.html" ></a>
-                </div>
-                <h3 class="my-5">Interior</h3>
-            </div>
-            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
-                <div class="single-product-item">
-                    <div class="product-image">
-                        <a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-                    </div>
+                    {{-- <a href="cart.html" ></a> --}}
+                {{-- </div> --}}
+                {{-- <h3 class="my-5">Interior</h3> --}}
+            {{-- </div> --}}
+            {{-- <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center"> --}}
+                {{-- <div class="single-product-item"> --}}
+                    {{-- <div class="product-image"> --}}
+                        {{-- <a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a> --}}
+                    {{-- </div> --}}
 
                     {{-- <p class="product-price"><span>Per Kg</span> 35$ </p> --}}
-                    <a href="cart.html"></a>
-                </div>
-                <h3 class="my-5">Packegies</h3>
-            </div>
-        </div>
+                    {{-- <a href="cart.html"></a> --}}
+                {{-- </div> --}}
+                {{-- <h3 class="my-5">Packegies</h3> --}}
+            {{-- </div> --}}
+
+        {{-- </div> --}}
+
     </div>
 </div>
 <!-- end product section -->

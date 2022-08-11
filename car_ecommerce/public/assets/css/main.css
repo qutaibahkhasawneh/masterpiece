@@ -540,6 +540,9 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   font-weight: 700;
   margin-right: 14px;
 }
+#category{
+    margin-bottom: 100px;
+}
 
 a.navbar-brand img {
   max-width: 150px;
@@ -915,6 +918,14 @@ h2.widget-title:after {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   color: #fff;
+}
+#non{
+    border-radius: 3px !important;
+    background-color: red;
+
+}
+button{
+    height: 50px;
 }
 
 .footer-box.subscribe form button {
@@ -2491,6 +2502,7 @@ input[type="number"] {
   width: 100px;
   margin-bottom: 15px;
 }
+
 
 .single-product-form a.cart-btn {
   margin-bottom: 15px;

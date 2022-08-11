@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\Facades\Session;
 
@@ -54,6 +55,26 @@ Route::get('/edit_products/{id}',[ProductController::class,'editProducts']);
 Route::get('/delete_products/{id}',[ProductController::class,'destroy']);
 
 
+// prodcut page route
+Route::get('/show_products',[ProductController::class,'allProduct']);
+Route::get('/single_product/{id}',[ProductController::class,'singleProduct']);
+
+// cart route
+Route::post('/carts', [CartController::class, 'store'])->name('carts.store');
+Route::get('/show_carts', [CartController::class, 'index'])->name('carts.index');
+Route::put('/carts/{cart}', [CartController::class, 'update'])->name('carts.update');
+Route::delete('/show_carts/{cart}', [CartController::class, 'destroy'])->name('carts.destroy');
+
+Route::get('/checkout', [CartController::class, 'checkout'])->name('carts.checkout');
+Route::post('/placeorder', [CartController::class, 'placeOrder'])->name('carts.placeorder');
+Route::get('/myorders', [CartController::class, 'myOrders'])->name('carts.myorders');
+Route::post('/ordersDetails', [CartController::class, 'ordersDetails'])->name('carts.ordersDetails');
+
+
+Route::get('/',[CategoryController::class,'create']);
+
+Route::get('single_category/{id}',[ProductController::class,'singleCategory'])->name('single_category');
+
 
 Route::get('/admin/index', function () {
     return view('admin.index');
@@ -80,9 +101,9 @@ Route::get('/admin/insert', function () {
 // })->name('admin/operation-categories');
 
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+// Route::get('/', function () {
+//     return view('pages.index');
+// });
 
 Route::get('/master', function () {
     return view('layouts.master');
@@ -107,12 +128,16 @@ Route::get('/single-product', function () {
 Route::get('/shop', function () {
     return view('pages.shop');
 });
-Route::get('/checkout', function () {
-    return view('pages.checkout');
-});
+// Route::get('/checkout', function () {
+//     return view('pages.checkout');
+// });
 Route::get('/edit', function () {
     return view('pages.editprofile');
 });
+
+// Route::get('/checkout', function(){
+//     return view('pages.checkout');
+// });
 
 // Route::get('/profile', function () {
 //     return view('pages.profile');

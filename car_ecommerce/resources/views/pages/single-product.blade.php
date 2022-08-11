@@ -22,22 +22,30 @@
 <div class="single-product mt-150 mb-150">
     <div class="container">
         <div class="row">
+
+
+
             <div class="col-md-5">
                 <div class="single-product-img">
-                    <img src="assets/img/products/product-img-5.jpg" alt="">
+                    <img src="{{asset('PostsImage/'.$product->product_img)}}" alt="">
                 </div>
             </div>
             <div class="col-md-7">
                 <div class="single-product-content">
-                    <h3>Green apples have polyphenols</h3>
-                    <p class="single-product-pricing"><span>Per Kg</span> $50</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta sint dignissimos, rem commodi cum voluptatem quae reprehenderit repudiandae ea tempora incidunt ipsa, quisquam animi perferendis eos eum modi! Tempora, earum.</p>
+
+                    <h3>{{$product->product_name}}</h3>
+                    <p class="single-product-pricing"><span><br></span> {{$product->product_price}} JD</p>
+                    <p>{{$product->product_description}}</p>
+
                     <div class="single-product-form">
-                        <form action="index.html">
-                            <input type="number" placeholder="0">
+                        <form action="{{ route('carts.store')}}" method="POST">
+                            @csrf
+                            <input style="width: 200px" type="number" value="1" min="1" max="100" class="form-control" name="quantity"><br>
+                            <input type="hidden" name="product_price" value="{{ $product->sale_status_id === 1 ? $product->product_price_on_sale : $product->product_price }}"/>
+                            <input type="hidden" name="product_id" value="{{ $product->id }}"/>
+                            <input type="submit" style="height: 45px" class="btn btn-warning" value="Add to cart">
                         </form>
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-                        <p><strong>Categories: </strong>Fruits, Organic</p>
+                        {{-- <p><strong>Categories: </strong>Fruits, Organic</p> --}}
                     </div>
                     <h4>Share:</h4>
                     <ul class="product-share">

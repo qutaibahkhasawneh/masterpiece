@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\File;
@@ -118,11 +119,12 @@ class UserController extends Controller
             'password' => ['required']
 
     ]);
+    $category = Category::all();
     $user = User::where('email','=',$request->email)->first();
     if($user){
         if(Hash::check($request->password,$user->password)){
             $request->Session()->put('loginId', $user->id);
-            return view('pages.index');
+            return view('pages.index', compact('category'));
         }else{
             return back()->with('fail', 'The password not matches.');
         }
@@ -132,9 +134,11 @@ class UserController extends Controller
     }
 
     public function logout(){
+
+        $category = Category::all();
         if(Session::has('loginId')){
             Session::pull('loginId');
-            return view('pages.index');
+            return view('pages.index', compact('category'));
         };
     }
 
