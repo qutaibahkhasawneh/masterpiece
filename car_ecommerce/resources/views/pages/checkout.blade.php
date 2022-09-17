@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Fresh and Organic</p>
+
 						<h1>Check Out Product</h1>
 					</div>
 				</div>
@@ -36,18 +36,30 @@
 						    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 						      <div class="card-body">
 						        <div class="billing-address-form">
-						        	<form action="index.html">
-						        		<p><input type="text" placeholder="Name"></p>
-						        		<p><input type="email" placeholder="Email"></p>
-						        		<p><input type="text" placeholder="Address"></p>
-						        		<p><input type="tel" placeholder="Phone"></p>
-						        		<p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
-						        	</form>
+
+                                    <form action="{{ route('carts.placeorder') }}" method="POST" >
+                                        @csrf
+
+                                        <p><input name="name" type="text" value="{{$user->name}}"></p>
+						        		<p><input name="email" type="email" value="{{$user->email }}"></p>
+						        		<p><input name="phone" type="text" value="{{$user->phone }}"></p>
+						        		<p><input name="address" type="tel" value="{{$user->address}}"></p><bt>
+
+
+
+
+
 						        </div>
+
 						      </div>
+
 						    </div>
+
 						  </div>
-						  <div class="card single-accordion">
+                          <button type="submit" class="btn btn-warning" >place order</button>
+
+                                    </form>
+						  {{-- <div class="card single-accordion">
 						    <div class="card-header" id="headingTwo">
 						      <h5 class="mb-0">
 						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -62,8 +74,8 @@
 						        </div>
 						      </div>
 						    </div>
-						  </div>
-						  <div class="card single-accordion">
+						  </div> --}}
+						  {{-- <div class="card single-accordion">
 						    <div class="card-header" id="headingThree">
 						      <h5 class="mb-0">
 						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -78,7 +90,7 @@
 						        </div>
 						      </div>
 						    </div>
-						  </div>
+						  </div> --}}
 						</div>
 
 					</div>
@@ -126,7 +138,8 @@
 
 							</tbody>
 						</table>
-						<a href="#" class="boxed-btn">Place Order</a>
+						{{-- <a href="#" class="boxed-btn">Place Order</a> --}}
+
 					</div>
 				</div>
 			</div>

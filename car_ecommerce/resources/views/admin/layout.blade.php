@@ -44,7 +44,7 @@
                 <div class="d-flex align-items-center ms-4 mb-4">
 
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
+                        <h6 class="mb-0">Qutaibah</h6>
                         <span>Admin</span>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         </div> --}}
                     </div>
 
-                    <div class="nav-item dropdown">
+                    {{-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="signin.html" class="dropdown-item">Sign In</a>
@@ -68,7 +68,7 @@
                             <a href="404.html" class="dropdown-item">404 Error</a>
                             <a href="blank.html" class="dropdown-item">Blank Page</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </nav>
         </div>
@@ -78,7 +78,7 @@
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+            {{-- <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
                 </a>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> --}}
             <!-- Navbar End -->
 
 

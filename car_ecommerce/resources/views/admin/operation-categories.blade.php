@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="row">{{$i++}}</th>
                     <td>{{$item->category_name}}</td>
-                    <td><img src="{{asset('PostsImage/'.$item->category_img)}}" alt=""  style="width: 70px"></td></td>
+                    <td><img src="{{asset('PostsImage/'.$item->category_img)}}" alt="" height="50px" style="width: 70px"></td></td>
                     <td><a href="{{url('edit_categories/'.$item->id)}}" class="btn btn-warning">Edit</a>
                         <a href="{{url('delete_categories/'.$item->id)}}" class="btn btn-danger">Delete</a>
 
@@ -37,7 +37,7 @@
 </div>
 
     <div>
-    <button style="margin-left: 900px" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button style="margin-left: 870px" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add Category
       </button>
     </div>

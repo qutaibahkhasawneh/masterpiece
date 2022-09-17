@@ -31,7 +31,7 @@
                         <p class="subtitle">High Quality</p>
                         <h1>Welcome Our Website</h1>
                         <div class="hero-btns">
-                            <a href="shop.html" class="boxed-btn">Shop Now</a>
+                            <a href="/show_products" class="boxed-btn">Shop Now</a>
                             {{-- <a href="contact.html" class="bordered-btn">Contact Us</a> --}}
                         </div>
                     </div>
@@ -50,6 +50,9 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="section-title">
+                    <h4>@if (Session::has('success'))
+                        <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif</h4></h4>
                     <h3><span class="orange-text">Our</span> Categories</h3>
 
                 </div>
@@ -60,7 +63,7 @@
         <div class="row" id="category">
 
             @foreach ($category as $item)
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 col-md-6 text-center picture">
 
                 <div class="single-product-item">
 
@@ -75,31 +78,6 @@
                 <h2 class="my-5">{{$item->category_name }}</h2>
             </div>
             @endforeach
-
-            {{-- <div class="col-lg-4 col-md-6 text-center"> --}}
-                {{-- <div class="single-product-item"> --}}
-                    {{-- <div class="product-image"> --}}
-                        {{-- <a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a> --}}
-                    {{-- </div> --}}
-
-                    {{-- <p class="product-price"><span>Per Kg</span> 70$ </p> --}}
-                    {{-- <a href="cart.html" ></a> --}}
-                {{-- </div> --}}
-                {{-- <h3 class="my-5">Interior</h3> --}}
-            {{-- </div> --}}
-            {{-- <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center"> --}}
-                {{-- <div class="single-product-item"> --}}
-                    {{-- <div class="product-image"> --}}
-                        {{-- <a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a> --}}
-                    {{-- </div> --}}
-
-                    {{-- <p class="product-price"><span>Per Kg</span> 35$ </p> --}}
-                    {{-- <a href="cart.html"></a> --}}
-                {{-- </div> --}}
-                {{-- <h3 class="my-5">Packegies</h3> --}}
-            {{-- </div> --}}
-
-        {{-- </div> --}}
 
     </div>
 </div>
@@ -195,7 +173,7 @@
 <div class="abt-section mb-150">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6 col-md-12 picture">
                 <div class="abt-bg">
                     <a href="https://unsplash.com/photos/rbXzG9aAxVA" ></a>
                 </div>
@@ -265,9 +243,9 @@
 <!-- shop banner -->
 <section class="shop-banner ">
     <div class="container">
-        <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
+        {{-- <h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
         <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
-      <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
+      <a href="shop.html" class="cart-btn btn-lg">Shop Now</a> --}}
 
     </div>
 </section>

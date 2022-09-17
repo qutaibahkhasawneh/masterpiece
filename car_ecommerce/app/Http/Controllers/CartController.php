@@ -29,7 +29,10 @@ class CartController extends Controller
             $cartItems = Cart::orderBy('carts.id', 'ASC')->where('user_id', Session::get('loginId'))->join('users', 'carts.user_id', '=', 'users.id')->join('products', 'carts.product_id', '=', 'products.id')->get(['carts.id','carts.sub_total', 'carts.quantity', 'products.product_img', 'products.product_name','products.product_price']);
             // dd($cartItems);
             $subtotal = Cart::where('user_id', Session::get('loginId'))->pluck('sub_total')->sum();
-            return view('pages.cart', compact('cartItems','subtotal'));
+            $user = User::all();
+            $total_price = Cart::where('user_id', Session::get('loginId'))->pluck('sub_total')->sum();
+            $allCart = Cart::where('user_id',Session::get('loginId'))->join('products', 'carts.product_id', '=', 'products.id')->get(['carts.quantity','carts.sub_total', 'products.product_name']);
+            return view('pages.cart', compact('cartItems','subtotal','user','allCart','total_price'));
         } else {
             return redirect()->route('login')->withFailure(__('You must login to see this page'));
         }
@@ -64,7 +67,7 @@ class CartController extends Controller
                     $cart->quantity =  $cart->quantity + $request->quantity;
                     $cart->sub_total = $cart->sub_total + (($request->quantity) * ($request->product_price));
                     $cart->update();
-                    return redirect(url()->previous()."#$request->product_id");
+                    return redirect(url()->previous()."#$request->product_id")->with('success','You have add to cart successfully');
                 } else {
 
                     $cart = new Cart();
@@ -76,7 +79,7 @@ class CartController extends Controller
                     return redirect(url()->previous()."#$request->product_id");
                 }
             } else {
-                return redirect()->route('login')->withFailure(__('You must login to purchase this product'));
+                return redirect('/login')->withFailure(__('You must login to purchase this product'));
             }
         } catch (ModelNotFoundException $exception) {
             return back()->withError($exception->getMessage())->withInput();
@@ -184,16 +187,16 @@ class CartController extends Controller
              $order->user_id = $cart->user_id;
              $order->product_id = $cart->product_id;
              $order->product_quantity = $cart->quantity;
-            //  $order->product_sub_total = $cart->sale_status_id === 1 ? $cart->product_price_on_sale : $cart->product_price;
+             $order->product_sub_total = $cart->sale_status_id === 1 ? $cart->product_price_on_sale : $cart->product_price;
             //  dd( $order->product_sub_total);
-             $order->order_total_price = $request->total_price;
+            //  $order->order_total_price = $request->total_price;
              $order->address = $request->address;
              $order->phone = $request->phone;
              $order->order_status = 'pending';
              $order->save();
              Cart::where('user_id',Session::get('loginId'))->delete();
          }
-         return redirect()->route('home')->withSuccess(__('You placed your order successfully.'));
+         return redirect()->route('home')->withSuccess(__('placed your order successfully.'));
     }
 
     public function myOrders(){
@@ -211,6 +214,6 @@ class CartController extends Controller
         $orders =  Order::orderBy('orders.id', 'DESC')->where('user_id', Session::get('loginId'))->where('orders.created_at',$request->order_date)->join('users', 'orders.user_id', '=', 'users.id')->join('products', 'orders.product_id', '=', 'products.id')->get(['orders.id','orders.product_sub_total','orders.order_total_price', 'orders.product_quantity','orders.address', 'orders.phone', 'orders.created_at', 'products.product_name','products.product_price']);
         // $orders =  Order::orderBy('orders.id', 'DESC')->where('user_id', Session::get('user')->id)->where('orders.created_at',$request->order_date)->join('users', 'orders.user_id', '=', 'users.id')->join('products', 'orders.product_id', '=', 'products.id')->get(['orders.id','orders.order_total_amount', 'orders.product_quantity','orders.address', 'orders.phone', 'orders.created_at', 'products.product_name',]);
         // dd($orders);
-        return view('ordersDetails', compact('orders'));
+        return view('admin.users', compact('orders'));
     }
 }

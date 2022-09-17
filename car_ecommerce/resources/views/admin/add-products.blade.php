@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <a style="margin-left: 970px" href="{{url('create')}}" class="btn btn-warning">Add product</a>
+    <a style="margin-left: 995px" href="{{url('create')}}" class="btn btn-warning">Add product</a><br><br>
 
 
 @endsection

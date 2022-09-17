@@ -72,6 +72,7 @@ Route::post('/ordersDetails', [CartController::class, 'ordersDetails'])->name('c
 
 
 Route::get('/',[CategoryController::class,'create']);
+Route::post('/',[CategoryController::class,'create'])->name('home');
 
 Route::get('single_category/{id}',[ProductController::class,'singleCategory'])->name('single_category');
 

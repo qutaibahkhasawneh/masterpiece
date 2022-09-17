@@ -439,6 +439,11 @@ a.read-more-btn:hover {
   color: #F28123;
 }
 
+.picture:hover{
+    transition: 0.7s ease;
+    transform: scale(1.1)
+}
+
 a.boxed-btn, a.bordered-btn, a.cart-btn {
   border-radius: 50px;
 }
@@ -2435,10 +2440,15 @@ ul.social-link-team li a {
   font-weight: 600;
   margin-bottom: 50px;
 }
-
+.my-5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(82, 82, 82);
+}
 p.product-price {
   font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -2733,8 +2743,8 @@ table.order-details tbody td {
 
 .single-product-item {
   -webkit-box-shadow: 0 0 20px #e4e4e4;
-  box-shadow: 0 0 20px #e4e4e4;
-  padding-bottom: 50px;
+  box-shadow: 0 0 10px #6a6a6a;
+  padding-bottom: 25px;
   border-radius: 5px;
 }
 

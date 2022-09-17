@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
                 <div class="breadcrumb-text">
-                    <p>Fresh and Organic</p>
+
                     <h1>Cart</h1>
                 </div>
             </div>
@@ -43,7 +43,7 @@
 
                                 <td class="product-image"><img style="height: 70px " src="{{asset('PostsImage/'.$item->product_img)}}" alt=""></td>
                                 <td class="product-name">{{$item->product_name }}</td>
-                                <td class="product-price">${{$item->product_price}}</td>
+                                <td class="product-price">{{$item->product_price}} JOD</td>
                                 <form  action="{{ route('carts.update', $item->id) }}" method="POST">
                                     <td class="product-total">{{$item->quantity}}</td>
                                     <td class="product-quantity"><input type="number" name="quantity" value="{{ $item->quantity }}"
@@ -82,44 +82,57 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="total-section">
-                    <table class="total-table">
-                        <thead class="total-table-head">
-                            <tr class="table-total-row">
-                                <th>Total</th>
+                <div class="order-details-wrap">
+                    <table class="order-details">
+                        <thead>
+                            <tr>
+                                <th>Your order Details</th>
                                 <th>Price</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="total-data">
-                                <td><strong>Subtotal: </strong></td>
-                                <td>$500</td>
+                        <tbody class="order-details-body">
+                            {{-- <tr>
+                                <td>Product</td>
+                                <td>Total</td>
+                            </tr> --}}
+                            @foreach ($allCart as $item)
+                            <tr>
+
+
+
+                                <td>{{$item->product_name}}</td>
+                                <td>{{$item->sub_total}}JD</td>
+
                             </tr>
-                            <tr class="total-data">
-                                <td><strong>Shipping: </strong></td>
-                                <td>$45</td>
+                            @endforeach
+
+                        </tbody>
+                        <tbody class="checkout-details">
+                            {{-- <tr>
+                                <td>Subtotal</td>
+                                <td>$190</td>
                             </tr>
-                            <tr class="total-data">
-                                <td><strong>Total: </strong></td>
-                                <td>$545</td>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>$50</td>
+                            </tr> --}}
+                            <tr>
+                                <td>Total</td>
+                                <td>{{$total_price}}JD</td>
                             </tr>
+
                         </tbody>
                     </table>
-                    {{-- <form  action="{{ route('carts.update', $item->id) }}" method="POST">
-                        @method('PUT')
-                        @csrf
-                    <div class="cart-buttons">
-                        <input type="submit" name="update" value="Update cart" >
-                        <input type="number" name="quantity" value="{{ $item->quantity }}"
-                        class="quantity form-control input-number" value="1" min="1" max="100">
-                    </form> --}}
-                        <br>
-                        
-                        <a class="btn btn-warning" href="{{route('carts.checkout')}}">Check out</a>
+                    {{-- <a href="#" class="boxed-btn">Place Order</a> --}}
+                    <br>
+
+                    <a class="btn btn-warning" href="{{route('carts.checkout')}}">Check out</a>
 
 
-                    </div>
                 </div>
+            </div>
+
+           
 
                 {{-- <div class="coupon-section">
                     <h3>Apply Coupon</h3>

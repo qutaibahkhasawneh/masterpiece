@@ -56,7 +56,7 @@
 
 							<label >
 								<label >
-                                    Dont Have an account ? <a style="color: orange" href="register">Register</a>
+                                    Dont Have an account ? <a style="color: orange" href="registeration">Register</a>
                                 </label>
 							</label>
 						</div>

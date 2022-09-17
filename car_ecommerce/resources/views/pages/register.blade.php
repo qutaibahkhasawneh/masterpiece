@@ -15,9 +15,12 @@
         }
 
         .limiter {
-  width: 100%;
-  margin: 70px auto;
-}
+            width: 100%;
+            margin: 70px auto;
+        }
+        .wrap-login100{
+            margin-top: 50px;
+        }
             </style>
 
 	<div class="limiter">

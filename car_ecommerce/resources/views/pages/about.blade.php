@@ -103,7 +103,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-1"></div>
-						<h4>Jimmy Doe <span>postion</span></h4>
+						<h4>Jamal Doeri <span></span></h4>
 						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -114,7 +114,7 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-2"></div>
-						<h4>Marry Doe <span>postion</span></h4>
+						<h4>Obadah Dari <span></span></h4>
 						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -125,7 +125,7 @@
 				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
 					<div class="single-team-item">
 						<div class="team-bg team-bg-3"></div>
-						<h4>Simon Joe <span>postion</span></h4>
+						<h4>Sameh Sari <span></span></h4>
 						{{-- <ul class="social-link-team">
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>

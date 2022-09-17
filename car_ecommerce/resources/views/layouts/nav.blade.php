@@ -91,13 +91,16 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="/">Home</a>
+								{{-- <li class="nav-link {{Request::is('/') ? 'active' : ''}}"><a href="/" >Home</a> --}}
+                                    <li class="nav-item"><a href="/"
+                                        class="nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a></li>
 									{{-- <ul class="sub-menu">
 										<li><a href="index.html">Static Home</a></li>
 										<li><a href="index_2.html">Slider Home</a></li>
 									</ul> --}}
 								</li>
-								<li><a href="/about">About</a></li>
+
+								<li class="nav-item"><a class="nav-link {{ Request::is('/about') ? 'active' : '' }}" href="/about" >About</a></li>
 								{{-- <li><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
@@ -115,30 +118,36 @@
 										<li><a href="single-news.html">Single News</a></li>
 									</ul>
 								</li> --}}
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="/profile">Profile</a></li>
-								<li><a href="/shop">Shop</a>
-									<ul class="sub-menu">
-										<li><a href="/show_products">Shop</a></li>
-										<li><a href="checkout.html">Check Out</a></li>
-										<li><a href="single-product.html">Single Product</a></li>
-										<li><a href="cart.html">Cart</a></li>
-									</ul>
+								<li class="nav-item"><a href="/contact" class="nav-link {{ Request::is('/contact') ? 'active' : '' }}">Contact</a></li>
+
+								<li class="nav-item"><a href="/show_products">Shop</a>
+
 								</li>
                                 <li>
-                                    <li><a href="login">Login</a></li>
-                                    <li><a href="logout">Register</a></li>
+                                    @if (Session::has('loginId'))
+                                    <li class="nav-item"><a class="nav-link {{ Request::is('/logout') ? 'active' : '' }} " href="logout">logout</a></li>
+                                    @else
+                                    <li class="nav-item"><a class="nav-link {{ Request::is('/login') ? 'active' : '' }} " href="login">login</a></li>
+                                    @endif
+
                                 </li>
 								<li>
+                                    @if (Session::has('loginId'))
+
 									<div class="header-icons">
 										<a class="shopping-cart" href="/show_carts"><i class="fas fa-shopping-cart"></i></a>
-										<a href="cart.html"><i class="fa-solid fa-user"></i></a>
-										{{-- <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a> --}}
+
+										<a href="/profile"><i class="fa-solid fa-user"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="/profile" class="nav-link {{ Request::is('/profile') ? 'active' : '' }}">Profile</a></li>
+                                            {{-- <li><a href="logout">Logout</a></li> --}}
+                                        </ul>
 									</div>
+                                    @endif
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>

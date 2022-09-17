@@ -26,6 +26,7 @@
 
 
             <div class="col-md-5">
+
                 <div class="single-product-img">
                     <img src="{{asset('PostsImage/'.$product->product_img)}}" alt="">
                 </div>
@@ -47,13 +48,15 @@
                         </form>
                         {{-- <p><strong>Categories: </strong>Fruits, Organic</p> --}}
                     </div>
-                    <h4>Share:</h4>
-                    <ul class="product-share">
+                    <h4>@if (Session::has('success'))
+                        <div class="alert alert-success">{{Session::get('success')}}</div>
+                        @endif</h4>
+                    {{-- <ul class="product-share">
                         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href=""><i class="fab fa-twitter"></i></a></li>
                         <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
                         <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>
@@ -62,7 +65,7 @@
 <!-- end single product -->
 
 <!-- more products -->
-<div class="more-products mb-150">
+{{-- <div class="more-products mb-150">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-center">
@@ -105,7 +108,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- end more products -->
 
 @endsection

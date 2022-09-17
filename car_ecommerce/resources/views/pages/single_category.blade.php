@@ -46,7 +46,7 @@
                     </div>
                     <h3></h3>
                     <p class="product-price"><span></span>{{$item->product_name}}</p>
-                    <a href="cart.html" class="cart-btn"><i class="fa-solid fa-eye"></i></i> view product</a>
+                    <a href="{{url('single_product/'.$item->id)}}" class="cart-btn"><i class="fa-solid fa-eye"></i></i> view product</a>
                 </div>
             </div>
             @endforeach
