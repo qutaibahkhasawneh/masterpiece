@@ -561,6 +561,7 @@ nav.main-menu ul {
 
 nav.main-menu ul li {
   display: inline-block;
+  margin-left: 15px;
 }
 
 nav.main-menu ul li a {

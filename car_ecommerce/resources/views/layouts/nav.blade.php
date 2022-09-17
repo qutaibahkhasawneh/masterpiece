@@ -138,10 +138,10 @@
 										<a class="shopping-cart" href="/show_carts"><i class="fas fa-shopping-cart"></i></a>
 
 										<a href="/profile"><i class="fa-solid fa-user"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="/profile" class="nav-link {{ Request::is('/profile') ? 'active' : '' }}">Profile</a></li>
+                                        {{-- <ul class="sub-menu"> --}}
+                                            {{-- <li><a href="/profile" class="nav-link {{ Request::is('/profile') ? 'active' : '' }}">Profile</a></li> --}}
                                             {{-- <li><a href="logout">Logout</a></li> --}}
-                                        </ul>
+                                        {{-- </ul> --}}
 									</div>
                                     @endif
 								</li>
